@@ -12,7 +12,7 @@ import os
 pt_x = ["20-25", "25-30", "30-35", "35-40", ">40"]
 dm_x = ["1 Prong", "1 Prong + $\pi^{0}$", "3 Prong"]
 
-out_folder = "sim_fit_2016ULpostVFP_mediumWP/"
+out_folder = "sim_fit_2016ULpreVFP_mediumWP/"
 
 
 
@@ -29,18 +29,21 @@ sim_tight_down = [0.03, 0.02, 0.01, 0.01, 0.02]
 
 
 
-ul_medim_cent = [1.05138, 0.99526, 0.99473, 0.99796, 0.98781]
-ul_medium_up = [0.02587, 0.01701, 0.01305, 0.02678, 0.02649]
-ul_medium_down = [0.02697, 0.01767, 0.01329, -0.01326, -0.01305]
+# ul_medim_cent = [1.05138, 0.99526, 0.99473, 0.99796, 0.98781]
+# ul_medium_up = [0.02587, 0.01701, 0.01305, 0.02678, 0.02649]
+# ul_medium_down = [0.02697, 0.01767, 0.01329, -0.01326, -0.01305]
 
 
-sim_medium_cent = [1.05138, 0.99526, 0.99473, 0.99796, 0.98781]
-sim_medium_up = [0.02587, 0.01701, 0.01305, 0.02678, 0.02649]
-sim_medium_down = [0.02697, 0.01767, 0.01329, 0.01326, 0.01305]
+# sim_medium_cent = [1.05138, 0.99526, 0.99473, 0.99796, 0.98781]
+# sim_medium_up = [0.02587, 0.01701, 0.01305, 0.02678, 0.02649]
+# sim_medium_down = [0.02697, 0.01767, 0.01329, 0.01326, 0.01305]
 
 
 
 
+sim_medium_cent = [1.06966, 0.98376, 0.98951, 0.98722, 1.0182]
+sim_medium_up = [0.03476, 0.04414, 0.03518, 0.02897, 0.01525]
+sim_medium_down = [0.03594, 0.02213, 0.018, 0.01442, 0.01563]
 
 
 
@@ -56,9 +59,26 @@ sim_loose_down = [0.03, 0.02, 0.02, 0.02, 0.02]
 
 
 
-dm_sim_medium_down = [0.02799, 0.02189, 0.02704]
-dm_sim_medium_up = [0.0278, 0.02145, 0.02656]
-dm_sim_medium_cent = [0.95137, 1.02356, 0.94861]
+# dm_sim_medium_down = [0.02799, 0.02189, 0.02704]
+# dm_sim_medium_up = [0.0278, 0.02145, 0.02656]
+# dm_sim_medium_cent = [0.95137, 1.02356, 0.94861]
+
+dm_sim_medium_down = [0.03128, 0.0239, 0.02326]
+dm_sim_medium_up = [0.06256, 0.02314, 0.02353]
+dm_sim_medium_cent = [0.99952, 1.10958, 0.97755,]
+
+
+SMALL_SIZE = 14
+MEDIUM_SIZE = 18
+BIGGER_SIZE = 22
+
+plt.rc('font', size=SMALL_SIZE)          # controls default text sizes
+plt.rc('axes', titlesize=SMALL_SIZE)     # fontsize of the axes title
+plt.rc('axes', labelsize=MEDIUM_SIZE)    # fontsize of the x and y labels
+plt.rc('xtick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
+plt.rc('ytick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
+plt.rc('legend', fontsize=SMALL_SIZE)    # legend fontsize
+plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
 
 
 
@@ -200,7 +220,7 @@ def plot_sfs_dm(working_point, out_folder, era):
     
     a0.set_title('CMS $Preliminary$ ', loc='left')
     a0.set_title(era+  "_UL "+ lumi+ ' fb$^{-1}$  (13 TeV)', loc='right')
-    a0.set_ylim(0.92, 1.1)
+    a0.set_ylim(0.92, 1.15)
     a0.axhline(y = 1, color = 'salmon', linestyle = 'dashed')
 
 
@@ -212,15 +232,15 @@ def plot_sfs_dm(working_point, out_folder, era):
 
     a0.legend(loc='center left', bbox_to_anchor=(1, 0.5))
     f.tight_layout()
-    plt.savefig(out_folder+working_point+"_dm_sim_fit_vs_diff_fit.pdf")
-    plt.savefig(out_folder+working_point+"_dm_sim_fit_vs_diff_fit.png")
+    plt.savefig(out_folder+working_point+"_dm_sim_fit_vs_diff_fit.pdf", dpi=300)
+    plt.savefig(out_folder+working_point+"_dm_sim_fit_vs_diff_fit.png", dpi=300)
 
 
 if not os.path.exists(out_folder):
    os.makedirs(out_folder)
 
 for vs_jet in vs_jets:
-    plot_sfs_pt(vs_jet, out_folder, "2016postVFP")
+    plot_sfs_pt(vs_jet, out_folder, "2016preVFP")
 
 for vs_jet in vs_jets:
-    plot_sfs_dm(vs_jet, out_folder, "2016postVFP")
+    plot_sfs_dm(vs_jet, out_folder, "2016preVFP")
