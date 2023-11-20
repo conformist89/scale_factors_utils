@@ -22,3 +22,13 @@ python3 sim_fit_v1.py
 ```
 
 scale factors should be copied as an input lists but this should be improved 
+
+This script works with hardcoded scale factors (but still need to fix correctionlib creation)
+
+```
+python3 full_range_plot_pt.py --era 2016postVFP
+```
+
+```
+python3 dm_scale_factors.py --era 2016postVFP
+```
