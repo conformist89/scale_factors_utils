@@ -1,0 +1,20 @@
+2016preVFP:
+  vvvloose: vvvloose_vs_jet_vvloose_vs_ele_6Nov_v1_v1
+  vvloose: vvloose_vs_jet_vvloose_vs_ele_6Nov_v1_v1
+  vloose: vloose_vs_jet_vvloose_vs_ele_6Nov_v1_v1
+  loose: loose_vs_jet_vvloose_vs_ele_6Nov_v1_v1
+  medium: medium_vs_jet_vvloose_vs_ele_6Nov_v1_v1
+  tight: tight_vs_jet_vvloose_vs_ele_6Nov_v1_v1
+  vtight: vtight_vs_jet_vvloose_vs_ele_6Nov_v1_v1
+  vvtight: vvtight_vs_jet_vvloose_vs_ele_6Nov_v1_v1
+
+
+2016postVFP:
+  vvvloose: vvvloose_vs_jet_vvloose_vs_ele_6Nov_v2_v1
+  vvloose: vvloose_vs_jet_vvloose_vs_ele_6Nov_v2_v1
+  vloose: vloose_vs_jet_vvloose_vs_ele_6Nov_v2_v1
+  loose: loose_vs_jet_vvloose_vs_ele_6Nov_v2_v1
+  medium: medium_vs_jet_vvloose_vs_ele_6Nov_v2_v1
+  tight: tight_vs_jet_vvloose_vs_ele_6Nov_v2_v1
+  vtight: vtight_vs_jet_vvloose_vs_ele_6Nov_v2_v1
+  vvtight: vvtight_vs_jet_vvloose_vs_ele_6Nov_v2_v1
