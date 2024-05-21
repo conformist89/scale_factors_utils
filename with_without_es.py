@@ -26,6 +26,20 @@ sim_fit_down = [0.089, 0.04, 0.038]
 working_point = "medium"
 
 
+SMALL_SIZE = 14
+MEDIUM_SIZE = 18
+BIGGER_SIZE = 22
+
+plt.rc('font', size=SMALL_SIZE)          # controls default text sizes
+plt.rc('axes', titlesize=SMALL_SIZE)     # fontsize of the axes title
+plt.rc('axes', labelsize=MEDIUM_SIZE)    # fontsize of the x and y labels
+plt.rc('xtick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
+plt.rc('ytick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
+plt.rc('legend', fontsize=SMALL_SIZE)    # legend fontsize
+plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
+
+
+
 def plot_sfs_dm(working_point, out_folder, era):
 
     deltax = 0.1
@@ -56,7 +70,7 @@ def plot_sfs_dm(working_point, out_folder, era):
 
     
     a0.set_title('CMS $Preliminary$ ', loc='left')
-    a0.set_title(era+  "_UL "+ lumi+ ' fb$^{-1}$  (13 TeV)', loc='right')
+    a0.set_title(era+ lumi+ ' fb$^{-1}$  (13 TeV)', loc='right')
     a0.set_ylim(0.8, 1.2)
     a0.axhline(y = 1, color = 'salmon', linestyle = 'dashed')
 
