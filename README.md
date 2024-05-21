@@ -18,7 +18,8 @@ Then one can plot scale factors as a function of pT and decay mode with the usag
 
 User can get the following pictures:
 
-![screenshot](2016postVFP_scale_factors_pt.png)
+![plot](2016postVFP_scele_factors_pt.png)
+
 
 ```
 python3 sim_fit_v1.py
