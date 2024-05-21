@@ -42,3 +42,7 @@ User can also compare two versions of different scale factors DM-wise (hardcoded
 ```
 python3 with_without_es.py
 ```
+
+As the output, user gets the following file:
+
+![plot](medium_dm_sim_fit_vs_diff_fit_dm_with_without_es.png)
