@@ -49,12 +49,15 @@ def plot_sfs_dm(working_point, out_folder, era):
     asym_error_sep_fit = np.array(list(zip(sep_fit_down_err, sep_fit_up_err))).T
     
 
-    f,a0 = plt.subplots(figsize=(10, 6))
+    f,a0 = plt.subplots(figsize=(14, 6))
 
 
     plt.grid()
-    a0.errorbar([0-deltax, 1-deltax, 2-deltax, ], sim_fit_cent, yerr=asym_error_sim_fit, fmt='.', label = r'TauID {work_p} + ES comb. fit'.format(work_p = str(working_point))+' $D_{jet}$', color="darkblue", marker = "^")
-    a0.errorbar([0+deltax, 1+deltax, 2+deltax, ], sep_fit_cent, yerr=asym_error_sep_fit, fmt='.', label = r'TauID {work_p} fit'.format(work_p = str(working_point))+' $D_{jet}$', color="magenta", marker = "^")
+    a0.errorbar([0-deltax, 1-deltax, 2-deltax, ], sim_fit_cent, yerr=asym_error_sim_fit, fmt='.',
+                 label = r'TauID {work_p} + ES comb. fit'.format(work_p = str(working_point))+' $D_{jet}$', color="darkblue", marker = "^", elinewidth=3)
+    
+    a0.errorbar([0+deltax, 1+deltax, 2+deltax, ], sep_fit_cent, yerr=asym_error_sep_fit, fmt='.',
+                 label = r'TauID {work_p} fit'.format(work_p = str(working_point))+' $D_{jet}$', color="magenta", marker = "^", elinewidth=3)
     a0.set_xlabel("$p_{T}($"+r"$\tau$"+"$_{h})$[GeV]")
     a0.set_ylabel("Correction factor")
 
@@ -70,9 +73,9 @@ def plot_sfs_dm(working_point, out_folder, era):
 
     
     a0.set_title('CMS $Preliminary$ ', loc='left')
-    a0.set_title(era+ lumi+ ' fb$^{-1}$  (13 TeV)', loc='right')
+    a0.set_title(era+" "+ lumi+ ' fb$^{-1}$  (13 TeV)', loc='right')
     a0.set_ylim(0.8, 1.2)
-    a0.axhline(y = 1, color = 'salmon', linestyle = 'dashed')
+    a0.axhline(y = 1, color = 'salmon', linestyle = 'dashed', linewidth=3)
 
 
 
