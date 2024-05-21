@@ -16,14 +16,13 @@ also should be used `--user_out_tag`
 
 Then one can plot scale factors as a function of pT and decay mode with the usage of `sim_fit_v1.py`:
 
-User can get the following pictures:
-
-![plot](2016postVFP_scele_factors_pt.png)
-
-
 ```
 python3 sim_fit_v1.py
 ```
+
+User can get the following pictures using previous command:
+
+![plot](2016postVFP_scele_factors_pt.png)
 
 scale factors should be copied as an input lists but this should be improved 
 
