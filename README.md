@@ -35,3 +35,10 @@ python3 full_range_plot_pt.py --era 2016postVFP
 ```
 python3 dm_scale_factors.py --era 2016postVFP
 ```
+
+User can also compare two versions of different scale factors DM-wise (hardcoded for now):
+
+
+```
+python3 with_without_es.py
+```
