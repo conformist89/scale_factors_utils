@@ -54,12 +54,12 @@ def plot_sfs_dm(working_point, out_folder, era):
 
     plt.grid()
     a0.errorbar([0-deltax, 1-deltax, 2-deltax, ], sim_fit_cent, yerr=asym_error_sim_fit, fmt='.',
-                 label = r'TauID {work_p} + ES comb. fit'.format(work_p = str(working_point))+' $D_{jet}$', color="darkblue", marker = "^", elinewidth=3)
+                 label = r'TauID + ES comb. fit, {work_p}'.format(work_p = str(working_point))+' $D_{jet}$', color="darkblue", marker = "^", elinewidth=3)
     
     a0.errorbar([0+deltax, 1+deltax, 2+deltax, ], sep_fit_cent, yerr=asym_error_sep_fit, fmt='.',
-                 label = r'TauID {work_p} fit'.format(work_p = str(working_point))+' $D_{jet}$', color="magenta", marker = "^", elinewidth=3)
+                 label = r'TauID  fit, {work_p}'.format(work_p = str(working_point))+' $D_{jet}$', color="magenta", marker = "^", elinewidth=3)
     a0.set_xlabel("$p_{T}($"+r"$\tau$"+"$_{h})$[GeV]")
-    a0.set_ylabel("Correction factor")
+    a0.set_ylabel(r'$\tau_{h}$'+ " ID Correction factor")
 
     lumi = "0"
     if era == "2016preVFP":
